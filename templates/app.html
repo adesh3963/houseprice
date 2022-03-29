@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banglore Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="static/app.js"></script>
+	
+</head>
+<body>
+<h2>Bengaluru House Price Prediction</h2>
+<form action="{{ url_for('predict') }}" method="POST">
+	<h2>AREA (Square Feet)</h2>
+    <input id="first" name="TOTAL_SQFT" type="number ">
+	<h2>BHK</h2>
+	<input id="second" name="BHK" required="required">
+
+    <h2>BALCONY</h2>
+	<input id="third" name="BALCONY" required="required">
+	
+
+	<h2>BATHROOMS</h2>
+	<input id="fourth" name="BATH" required="required">
+	<h2>LOCATION</h2>
+	<div>
+  		<select class="location" name="LOCATION" id="uiLocations">
+        <option value="" disabled="disabled" selected="selected">Choose a Location</option> {
+		<option>Electronic City</option>
+        <option>Rajaji Nagar</option>  
+  		</select>
+	</div>
+	<br>
+	<button class="submit" type="submit">Estimate Price</button>
+	</form>
+	
+
+
+
+
+	<style>
+        body {
+            background-color: rgb(162, 182, 202);
+            text-align: center;
+            padding: 0px;
+        }
+        
+        
+        
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+		#uiLocations {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+		
+    </style>
+</body>
+</html>
